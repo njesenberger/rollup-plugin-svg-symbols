@@ -1,9 +1,0 @@
-{
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "eslint.validate": ["javascript", "typescript"],
-	"css.validate": false,
-	"scss.validate": false,
-	"stylelint.validate": ["css", "scss", "vue"]
-}

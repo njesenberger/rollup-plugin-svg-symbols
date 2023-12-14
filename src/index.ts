@@ -4,21 +4,19 @@ import { createFilter, normalizePath } from '@rollup/pluginutils';
 
 const { stringify } = JSON;
 
-export default (baseUrl: string = 'assets/svg') => {
+export default (options: { baseUrl: string } = { baseUrl: 'src/assets/svg' }) => {
+	const { baseUrl } = options;
 	const normalizedBaseUrl = `${normalizePath(baseUrl)}/`;
 	const svgFilter = createFilter(['**/*.svg'], normalizedBaseUrl);
 
 	return {
 		name: 'rollup-plugin-svg-symbols',
-		transform(id: string) {
+		transform(_code: string, id: string) {
 			if (!svgFilter(id)) {
 				return null;
 			}
 
 			const relativePath = relative(normalizedBaseUrl, id);
-			console.log({relativePath});
-			console.log({id});
-
 			const svgString: string = readFileSync(id).toString();
 			const svgId: string = (
 				relativePath
@@ -34,7 +32,7 @@ export default (baseUrl: string = 'assets/svg') => {
 
 			return `
 				export default { id: ${stringify(svgId)}, viewBox: ${stringify(viewBox)} };
-				import { addSymbol } from '@/rollup-plugin-svg-symbols/runtime';
+				import { addSymbol } from 'rollup-plugin-svg-symbols/runtime';
 				addSymbol(${stringify(svgSymbolString)});
 			`;
 		},
