@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-svg-symbols",
-  "version": "0.0.13",
+  "version": "0.0.20",
   "description": "Transform imported SVG files into reusable SVG symbols",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.mjs",
@@ -37,11 +37,12 @@
     }
   },
 	"files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "build": "rollup -c",
-		"postinstall": "npm run build"
+		"prepare": "npm run build"
   },
   "repository": {
     "type": "git",

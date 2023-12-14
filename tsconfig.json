@@ -3,12 +3,12 @@
 		"target": "ESNext",
 		"module": "ESNext",
 		"moduleResolution": "node",
-		"types": [
-			"node"
-		]
+		"declaration": true,
+		"outDir": "./dist/types"
 	},
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+		"types/**/*.ts",
   ],
   "exclude": [
     "node_modules"
