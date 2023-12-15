@@ -38,8 +38,7 @@
     }
   },
 	"files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "rollup -c",
