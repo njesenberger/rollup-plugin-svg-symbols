@@ -1,6 +1,6 @@
-# Project Name
+# rollup-plugin-svg-symbols
 
-A brief description of the project.
+Rollup/Vite alternative to the package [SVG sprite loader](https://github.com/JetBrains/svg-sprite-loader) for Webpack from JetBrains.
 
 ## Table of Contents
 
@@ -11,7 +11,9 @@ A brief description of the project.
 
 ## Installation
 
-Instructions on how to install and set up the project.
+```shell
+npm install --save-dev rollup-plugin-svg-symbols
+```
 
 ## Usage
 
