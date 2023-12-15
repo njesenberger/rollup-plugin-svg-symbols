@@ -1,10 +1,11 @@
+import { Plugin } from 'rollup';
 import { relative } from 'path';
 import { readFileSync } from 'fs';
 import { createFilter, normalizePath } from '@rollup/pluginutils';
 
 const { stringify } = JSON;
 
-export default (options: { baseUrl?: string } = {}) => {
+export default (options: { baseUrl?: string } = {}): Plugin => {
 	const { baseUrl = 'assets/svg' } = options;
 	const normalizedBaseUrl = normalizePath(baseUrl);
 	const svgFilter = createFilter('**/*.svg', normalizedBaseUrl);
