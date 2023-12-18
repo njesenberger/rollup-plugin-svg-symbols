@@ -65,7 +65,7 @@ This configuration will recursively look for SVG files inside `'src/icons'`.
 </template>
 
 <script setup>
-import MyIcon from '@/assets/icons/my-icon.svg';
+import MyIcon from '~/assets/icons/my-icon.svg';
 </script>
 ```
 
@@ -114,7 +114,7 @@ import SvgIcon from './SvgIcon.vue';
 ### React + Vite
 #### Basic example <a name="basic-example-react"></a>
 ```jsx
-import MyIcon from '@/assets/icons/my-icon.svg';
+import MyIcon from '~/assets/icons/my-icon.svg';
 
 export default function App() {
   return (
