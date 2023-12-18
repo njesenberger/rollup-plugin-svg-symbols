@@ -9,11 +9,11 @@ Rollup/Vite alternative to the package [SVG sprite loader](https://github.com/Je
   - [Custom SVG directory](#custom-svg-directory) 
 - [Usage](#usage)
   - [Vue + Vite](#vue--vite)
-    - [Basic example](#basic-example-vue--vite)
-    - [Dynamic example](#dynamic-example-vue--vite)
+    - [Basic example](#basic-example-vue)
+    - [Dynamic example](#dynamic-example-vue)
   - [React + Vite](#react--vite)
-    - [Basic example](#basic-example-react--vite)
-    - [Dynamic example](#dynamic-example-react--vite)
+    - [Basic example](#basic-example-react)
+    - [Dynamic example](#dynamic-example-react)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -56,7 +56,7 @@ This configuration will recursively look for SVG files inside `'src/icons'`.
 
 ## Usage
 ### Vue + Vite
-#### Basic example
+#### Basic example <a name="basic-example-vue"></a>
 ```vue
 <template>
   <svg :viewBox="MyIcon.viewBox" aria-hidden="true">
@@ -69,7 +69,7 @@ import MyIcon from '@/assets/icons/my-icon.svg';
 </script>
 ```
 
-#### Dynamic example
+#### Dynamic example <a name="dynamic-example-vue"></a>
 ##### SvgIcon.vue
 ```vue
 <template>
@@ -107,7 +107,7 @@ watchEffect(() => {
 ```
 
 ### React + Vite
-#### Basic example
+#### Basic example <a name="basic-example-react"></a>
 ```jsx
 import MyIcon from '@/assets/icons/my-icon.svg';
 
@@ -122,7 +122,7 @@ export default function App() {
 };
 ```
 
-#### Dynamic example
+#### Dynamic example <a name="dynamic-example-react"></a>
 ##### SvgIcon.jsx
 ```jsx
 import { useState, useEffect } from 'react';
