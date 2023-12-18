@@ -14,8 +14,6 @@ Rollup/Vite alternative to the package [SVG sprite loader](https://github.com/Je
     - [Basic example](#basic-example-vue)
     - [Dynamic example](#dynamic-example-vue)
   - [Nuxt](#nuxt)
-    - [Basic example](#basic-example-nuxt)
-    - [Dynamic example](#dynamic-example-nuxt)
   - [React](#react)
     - [Basic example](#basic-example-react)
     - [Dynamic example](#dynamic-example-react)
