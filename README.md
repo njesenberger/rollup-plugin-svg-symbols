@@ -43,7 +43,7 @@ bun add rollup-plugin-svg-symbols --dev
 ## Configuration
 ### Rollup/Vite <a name="rollup-vite-configuration"></a>
 ```js
-rollup.config.js or vite.config.js
+// rollup.config.js or vite.config.js
 import svgSymbols from 'rollup-plugin-svg-symbols';
 
 export default {
