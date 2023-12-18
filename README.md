@@ -5,7 +5,15 @@ Rollup/Vite alternative to the package [SVG sprite loader](https://github.com/Je
 ## Table of Contents
 
 - [Installation](#installation)
+- [Configuration](#configuration)
+  - [Custom SVG directory](#custom-svg-directory) 
 - [Usage](#usage)
+  - [Vue + Vite](#vue--vite)
+    - [Basic example](#basic-example-vue--vite)
+    - [Dynamic example](#dynamic-example-vue--vite)
+  - [React + Vite](#react--vite)
+    - [Basic example](#basic-example-react--vite)
+    - [Dynamic example](#dynamic-example-react--vite)
 - [Contributing](#contributing)
 - [License](#license)
 
