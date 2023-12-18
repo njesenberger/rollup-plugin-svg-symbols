@@ -64,7 +64,7 @@ This configuration will recursively look for SVG files inside `'src/icons'`.
   </svg>
 </template>
 
-<script setup>
+<script>
 import MyIcon from '~/assets/icons/my-icon.svg';
 </script>
 ```
@@ -107,8 +107,9 @@ watchEffect(() => {
   <SvgIcon icon="nested-folder/my-other-icon" />
 </template>
 
-<script setup>
+<script>
 import SvgIcon from './SvgIcon.vue';
+</script>
 ```
 
 ### React + Vite
