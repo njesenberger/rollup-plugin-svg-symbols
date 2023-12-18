@@ -80,7 +80,7 @@ import MyIcon from '@/assets/icons/my-icon.svg';
 
 <script setup>
 const props = defineProps({
-  icon: String
+  icon: String,
 });
 
 const svgImports = import.meta.glob('../../assets/**/*.svg');
