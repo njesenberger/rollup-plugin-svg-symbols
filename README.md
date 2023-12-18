@@ -55,16 +55,16 @@ export default {
 ```
 ### Nuxt <a name="nuxt-configuration"></a>
 ```js
-// nuxt.config.js
+// nuxt.config.ts
 import svgSymbols from 'rollup-plugin-svg-symbols';
 
-export default {
+export default defineNuxtConfig({
   vite: {
     plugins: [
       svgSymbols(),
     ],
   },
-};
+});
 ```
 
 ### Custom SVG directory
@@ -134,6 +134,22 @@ import SvgIcon from './SvgIcon.vue';
 
 ### Nuxt
 Usage with Nuxt is the same as [Vue](#vue) without the need to import components and [Vue APIs](https://vuejs.org/api/).
+
+### React + Vite
+#### Basic example <a name="basic-example-react"></a>
+```jsx
+import MyIcon from '~/assets/icons/my-icon.svg';
+
+export default function App() {
+  return (
+    <>
+      <svg viewBox={MyIcon.viewBox} aria-hidden="true">
+        <use href={MyIcon.id} />
+      </svg>
+    </>
+  );
+};
+```
 
 #### Dynamic example <a name="dynamic-example-react"></a>
 ##### SvgIcon.js
