@@ -104,6 +104,9 @@ watchEffect(() => {
   <SvgIcon icon="my-icon" />
   <SvgIcon icon="nested-folder/my-other-icon" />
 </template>
+
+<script setup>
+import SvgIcon from './SvgIcon.vue';
 ```
 
 ### React + Vite
@@ -123,11 +126,11 @@ export default function App() {
 ```
 
 #### Dynamic example <a name="dynamic-example-react"></a>
-##### SvgIcon.jsx
+##### SvgIcon.js
 ```jsx
 import { useState, useEffect } from 'react';
 
-const SvgIcon = ({ icon }) => {
+export default function SvgIcon({ icon }) {
   const [svg, setSvg] = useState({ id: '', viewBox: '0 0 0 0' });
 
   useEffect(() => {
@@ -146,13 +149,11 @@ const SvgIcon = ({ icon }) => {
     </svg>
   );
 };
-
-export default SvgIcon;
 ```
 
 ##### Using SvgIcon component
 ```jsx
-import SvgIcon from './SvgIcon';
+import SvgIcon from './SvgIcon.js';
 
 export default function App() {
   return (
