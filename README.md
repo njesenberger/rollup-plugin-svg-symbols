@@ -74,11 +74,13 @@ import MyIcon from '@/assets/icons/my-icon.svg';
 ```vue
 <template>
   <svg :viewBox="svg.viewBox" aria-hidden="true">
-    <use :href="`#${svg.id}`" />
+    <use :href="svg.id" />
   </svg>
 </template>
 
 <script setup>
+import { ref, watchEffect } from 'vue';
+
 const props = defineProps({
   icon: String,
 });
