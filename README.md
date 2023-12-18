@@ -6,12 +6,17 @@ Rollup/Vite alternative to the package [SVG sprite loader](https://github.com/Je
 
 - [Installation](#installation)
 - [Configuration](#configuration)
+  - [Rollup/Vite](#rollup-vite-configuration)
+  - [Nuxt](#nuxt-configuration)
   - [Custom SVG directory](#custom-svg-directory) 
 - [Usage](#usage)
-  - [Vue + Vite](#vue--vite)
+  - [Vue](#vue)
     - [Basic example](#basic-example-vue)
     - [Dynamic example](#dynamic-example-vue)
-  - [React + Vite](#react--vite)
+  - [Nuxt](#nuxt)
+    - [Basic example](#basic-example-nuxt)
+    - [Dynamic example](#dynamic-example-nuxt)
+  - [React](#react)
     - [Basic example](#basic-example-react)
     - [Dynamic example](#dynamic-example-react)
 - [Contributing](#contributing)
@@ -36,8 +41,9 @@ bun add rollup-plugin-svg-symbols --dev
 
 
 ## Configuration
+### Rollup/Vite <a name="rollup-vite-configuration"></a>
 ```js
-// rollup.config.js or vite.config.js
+rollup.config.js or vite.config.js
 import svgSymbols from 'rollup-plugin-svg-symbols';
 
 export default {
@@ -47,6 +53,20 @@ export default {
   ],
 };
 ```
+### Nuxt <a name="nuxt-configuration"></a>
+```js
+// nuxt.config.js
+import svgSymbols from 'rollup-plugin-svg-symbols';
+
+export default {
+  vite: {
+    plugins: [
+      svgSymbols(),
+    ],
+  },
+};
+```
+
 ### Custom SVG directory
 ```js
 svgSymbols({ baseUrl: 'src/icons' }) // defaults to 'assets/svg'
@@ -55,7 +75,7 @@ This configuration will recursively look for SVG files inside `'src/icons'`.
 
 
 ## Usage
-### Vue + Vite
+### Vue
 #### Basic example <a name="basic-example-vue"></a>
 ```vue
 <template>
@@ -112,21 +132,8 @@ import SvgIcon from './SvgIcon.vue';
 </script>
 ```
 
-### React + Vite
-#### Basic example <a name="basic-example-react"></a>
-```jsx
-import MyIcon from '~/assets/icons/my-icon.svg';
-
-export default function App() {
-  return (
-    <>
-      <svg viewBox={MyIcon.viewBox} aria-hidden="true">
-        <use href={MyIcon.id} />
-      </svg>
-    </>
-  );
-};
-```
+### Nuxt
+Usage with Nuxt is the same as [Vue](#vue) without the need to import components and [Vue APIs](https://vuejs.org/api/).
 
 #### Dynamic example <a name="dynamic-example-react"></a>
 ##### SvgIcon.js
