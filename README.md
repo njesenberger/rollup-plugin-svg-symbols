@@ -133,7 +133,7 @@ import SvgIcon from './SvgIcon.vue';
 ```
 
 ### Nuxt
-Usage with Nuxt is the same as [Vue](#vue) without the need to import components and [Vue APIs](https://vuejs.org/api/).
+Usage with Nuxt is the same as with [Vue](#vue), without the need to import components and [Vue APIs](https://vuejs.org/api/).
 
 ### React + Vite
 #### Basic example <a name="basic-example-react"></a>
