@@ -104,6 +104,7 @@ const props = defineProps({
 });
 
 const svgImports = import.meta.glob('/**/*.svg');
+
 const svg = ref({ id: '', viewBox: '0 0 0 0' });
 
 const loadSvg = async () => {
