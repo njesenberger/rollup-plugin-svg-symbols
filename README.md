@@ -103,7 +103,7 @@ const props = defineProps({
   icon: String,
 });
 
-const svgImports = import.meta.glob('../../assets/**/*.svg');
+const svgImports = import.meta.glob('/**/*.svg');
 const svg = ref({ id: '', viewBox: '0 0 0 0' });
 
 const loadSvg = async () => {
